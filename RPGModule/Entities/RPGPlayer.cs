@@ -1461,12 +1461,12 @@ namespace AnotherRpgMod.RPGModule.Entities
                 if (Item != null && Item.NeedsSaving(player.HeldItem))
                 {
                     if (Config.gpConfig.ItemTree)
-                        value = Item.leech;
+                        value = Item.leech/2;
                     else
                         value = Item.GetLifeLeech*0.01f;
                 }
             }
-            
+
             if (Config.gpConfig.RPGPlayer)
             {
                 if (skilltree.HavePerk(Perk.Vampire) && !Main.dayTime)
@@ -1485,8 +1485,10 @@ namespace AnotherRpgMod.RPGModule.Entities
                     }
                 }
                 value += skilltree.GetLeech(LeechType.Life) + skilltree.GetLeech(LeechType.Both);
+
             }
             value *= player.statLifeMax2;
+
             return value;
         }
         public float GetManaLeech()
