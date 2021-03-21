@@ -1,0 +1,77 @@
+And another RPG mod ! 
+
+Rpg mod that add Level, Stats, Skill tree, Item leveling, ennemies rank, modifier, and heavily customizable !!
+
+
+
+Join Discord : https://discord.gg/UQueeQE ! (link also on webpage)
+
+
+
+
+
+Changelog : 
+
+1.5.1.7
+Fix Value sometime going to -2 billion
+Reverted name to be back as vanilla when playing Multiplayer
+Nerf Npc Bonus gold drop from levels
+
+1.5.1.6
+Fix Level cap not applying correctly for bonus level
+
+1.5.1.5
+Reboost Hardmode ennemies HP
+MP Desync should be less common (not fixed)
+Bonus Level from world should no longer ignore NPC LImit Growth
+
+1.5.1.4
+fix rare crash
+slight increase do boss HP pre-hardmode
+fix mp name bug
+
+1.5.1.3
+fix MP sending player date freeze
+disabling player module should apply correctly to some perk and class bonus now
+
+
+1.5.1.2 
+Fix minor bug that made some perk/class bonus apply when Player Rpg Module was disabled
+Fix boss having WAY TO MUCH hp before hardmode
+
+
+1.5.1.1
+Boosted non-boss Health in Hard mode
+Fixed DemonEater Working on each hit
+Fixed Armor Breaker Modifier for NPC
+
+
+
+1.5.1
+
+NPC : 
+	HUGE balancing Edit, ennemies are overall more powerfull as you advance into the game
+	Limit NPC Growth now world correctly, and use the higgest level player for mp (reset when relaunching server)
+	Ennemeis with OVERLY high def should no longer have crazy levels
+
+Item :
+	Modifier count has been hugely reduced on accesories and weapon
+	Nerf Vampiric aura modifier healing speed
+	Added a cap on bonus damage from buff/debuff modifier
+	Rarity has been balanced, mythical is now realy realy rare, legendary is also itself quite rare
+	Also fixed BossKilled impact on rarity roll
+	Entering Hardmode also improve item rarity chances
+	Fixed ItemTree 0/0 when sharing item in multiplayer
+
+
+Config : 
+	Added a config option to limit npc scaling based on a percent of your level
+	Added Config to use custom skill tree (could have lot of issue for MP)
+	Added config to disable rarity on boss 
+	Added config for world level gain on boss kill (no longer influenced by ascending cap)
+	Added 3 new config option for NPC Growth, On boss, On Hard mode, and on hard mode Percent, allowing finer tuning for your moded crazy let's play
+
+
+Added /WorldRPGInfo Command to display some info on the world (mainly for debug)
+
+untest : should correctly display other player max health, may also fail miserably

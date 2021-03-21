@@ -1,0 +1,8 @@
+displayName = [c/4cff9c:Another RPG Mod]
+author = Plexus
+version = 1.5.1.7
+homepage = https://forums.terraria.org/index.php?threads/another-rpg-mod.67218/
+weakReferences = DBZMOD@1.0.9.3, ThoriumMod@1.5.0.0
+includeSource = true
+includePDB = true
+sortAfter = DBZMOD, ThoriumMod
