@@ -29,4 +29,4 @@ Nerf armor gain on VIT/CONS
 ### Misc/QoL/Bug fixes
 - Increase exp gain per hit for weapons to compensate for the damage loss with the nerf. *(RPGPlayer.cs Line 190)*
 - Reduce exp lost when transfering XP from 75% -> 25% ( you keep 75% of the old item's XP) *(ItemExtraction.cs Line 36)*
-- Fixed life leech calculation resulting in 2x life leech amount from item tree. This was fixed by dividing the value by 2 after calculating it from item tree. This is a dumb w   way to fix and just acts as a temporary workaround. *(RPGPlayer.cs Line 1464)*
+- Fixed life leech calculation resulting in 2x life leech amount from item tree. This was fixed by dividing the value by 2 after calculating it from item tree. This is a dumb     way to fix and just acts as a temporary workaround. *(RPGPlayer.cs Line 1464)*
