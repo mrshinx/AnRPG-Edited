@@ -26,6 +26,7 @@ Nerf armor gain on VIT/CONS
 - Enemy spawns with randomized level around the cap with a range of -7 to +3 level. Bosses randomly get 10-25 increased level above the cap.
 - Formulas for HP/Damage of NPC/Bosses nerfed. *(NPCUtils.cs line 628, 642, 649)*
 - Formulas for Defense reworked. Now enemy defense matters. This is implemented to increase enemy survivability without the need of continuously increasing enemy HP. Moreover,       this can prevent tank classes from investing all to defense stat and can still do damage. *(NPCUtils.cs line 657,659)*
-### Misc/QoL
+### Misc/QoL/Bug fixes
 - Increase exp gain per hit for weapons to compensate for the damage loss with the nerf. *(RPGPlayer.cs Line 190)*
 - Reduce exp lost when transfering XP from 75% -> 25% ( you keep 75% of the old item's XP) *(ItemExtraction.cs Line 36)*
+- Fixed life leech calculation resulting in 2x life leech amount from item tree. This was fixed by dividing the value by 2 after calculating it from item tree. This is a dumb w   way to fix and just acts as a temporary workaround. *(RPGPlayer.cs Line 1464)*
