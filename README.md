@@ -5,12 +5,13 @@ This is a modified version of a Tmodloader mod: **Another RPG Mod** by **Plexus*
 ### Player Stat
 Nerf armor gain on VIT/CONS
 ### Item Tree
-#### TLDR: Everything is nerfed, especially Ascension Nodes. 
+#### TLDR: Everything is nerfed, especially Ascension Nodes. All weapons get equal level requirement for ascension.
 #### Detailed changes:
 - Ascension Flat Damage and Ascension Percentage Damage node value hugely decreased.
 - Ascension Multiple Projectiles reworked. Now fires extra projectile with 30% damage. This node is very hard to balance, since it brings **100% more** damage for ranged weapons with just 1 point in early phase of the game. Moreover, not every weapon benefits from it, so it clutters the item tree with no real purpose, making ranged weapons lose Ascension Points for nothing. I couldn't know how to modifiy its rarity in the item tree to make it appear less frequent, so I disabled it by default. *(ItemNodeAtlas.cs Line 35)*
 - Slightly nerfed every other damage node.
 - Defense bonus node on Armor pieces reworked. Cost increases the deeper you go into the skill tree, but they provide more defense per level. 
+- All weapons now have the same 10 level requirement for ascension. The current system can lead to wrong assumption of item's power, for example a Sky Fracture can be obtained pre-Mech bosses and Megashark is obtained post-Mech. But Megashark's level requirement for ascension is 10 while a Sky Fracture has 20. By the time both items have ascended 10 times, Sky Fracture has 220 level while a Megashark only has 110. This gives Sky Fracture more space to generate high-level ascension node as well as 2x amount of damage nodes to invest to. Imagine items with 40 level requirement, they will be able to scale crazily. *(ItemUpdate.cs Line 1341)*
 ### Skill Tree
 #### TLDR: Every class bonus damage is nerfed, some tweaks to bonus class damage nodes.
 #### Detailed changes:
