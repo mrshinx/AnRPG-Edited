@@ -177,13 +177,13 @@ namespace AnotherRpgMod
                 "Monk",
                 new float[7]{ 0.1f, 0, 0, 0.3f, 0, 0, 0 },
                 0,
-                0.2f,0.1f,0,0,0.35f,0.0005f,0.2f
+                0.25f,0.05f,0,0,0.35f,0.0005f,0.2f
             ),
                 new JsonChrClass(
                 "Knight",
                 new float[7]{ 0.4f, 0, 0, 0, 0, 0, 0 },
                 0,
-                0.4f,0.2f,0,0,0,0,0,0,0
+                0.4f,0.15f,0,0,0,0,0,0,0
             ),
 
             //Specialist - Tier 3
@@ -227,13 +227,13 @@ namespace AnotherRpgMod
                 "Templar",
                 new float[7]{ 0.2f, 0, 0, 0.45f, 0, 0, 0 },
                 0,
-                0.3f,0.15f,0,0,0.5f,0.00075f,0.3f
+                0.35f,0.1f,0,0,0.5f,0.00075f,0.3f
             ),
                 new JsonChrClass(
                 "IronKnight",
                 new float[7]{ 0.55f, 0, 0, 0, 0, 0, 0 },
                 0,
-                0.5f,0.3f,0,0,0,0,0,0,0
+                0.55f,0.2f,0,0,0,0,0,0,0
             ),
 
             //Specialist - Tier 4
@@ -277,13 +277,13 @@ namespace AnotherRpgMod
                 "Paladin",
                 new float[7]{ 0.35f, 0, 0, 0.6f, 0, 0, 0 },
                 0,
-                0.4f,0.25f,0,0,0.65f,0.001f,1
+                0.45f,0.2f,0,0,0.65f,0.001f,1
             ),
                 new JsonChrClass(
                 "Montain",
                 new float[7]{ 0.7f, 0, 0, 0, 0, 0, 0 },
                 0,
-                0.6f,0.4f,-0.05f,0,0,0,0,0,0
+                0.65f,0.3f,-0.05f,0,0,0,0,0,0
             ),
 
             //Specialist - Tier 5
@@ -327,13 +327,13 @@ namespace AnotherRpgMod
                 "Deity",
                 new float[7]{ 0.45f, 0, 0, 0.75f, 0, 0, 0 },
                 0,
-                0.5f,0.35f,0,0,0.8f,0.002f,0.5f
+                0.55f,0.3f,0,0,0.8f,0.002f,0.5f
             ),
                 new JsonChrClass(
                 "Fortress",
                 new float[7]{ 0.85f, 0, 0, 0, 0, 0, 0 },
                 0,
-                1f,0.5f,-0.05f,0,0,0,0,0,0
+                0.8f,0.4f,-0.05f,0,0,0,0,0,0
             ),
 
             //Ascended Specialist / T6
