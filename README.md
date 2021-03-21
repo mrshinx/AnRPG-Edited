@@ -6,3 +6,4 @@ This is a modified version of a Tmodloader mod: **Another RPG Mod** by **Plexus*
 ### Item Tree
 ### Skill Tree
 ### Enemy Changes
+### Misc/QoL
