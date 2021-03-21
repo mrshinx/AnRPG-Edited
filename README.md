@@ -8,7 +8,7 @@ Nerf armor gain on VIT/CONS
 #### TLDR: Everything is nerfed, especially Ascension Nodes. 
 #### Detailed changes:
 - Ascension Flat Damage and Ascension Percentage Damage node value hugely decreased.
-- Ascension Multiple Projectiles reworked. Now fires extra projectile with 30% damage. This node is very hard to balance, since it brings **100% more** damage for ranged weapons with just 1 point in early phase of the game. Moreover, not every weapon benefits from it, so it clutters the item tree with no real purpose, making ranged weapons lose Ascension Points for nothing. I couldn't know how to modifiy its rarity in the item tree to make it appear less frequent, so I disabled it by default.
+- Ascension Multiple Projectiles reworked. Now fires extra projectile with 30% damage. This node is very hard to balance, since it brings **100% more** damage for ranged weapons with just 1 point in early phase of the game. Moreover, not every weapon benefits from it, so it clutters the item tree with no real purpose, making ranged weapons lose Ascension Points for nothing. I couldn't know how to modifiy its rarity in the item tree to make it appear less frequent, so I disabled it by default. *(ItemNodeAtlas.cs Line 35)*
 - Slightly nerfed every other damage node.
 - Defense bonus node on Armor pieces reworked. Cost increases the deeper you go into the skill tree, but they provide more defense per level. 
 ### Skill Tree
@@ -24,5 +24,7 @@ Nerf armor gain on VIT/CONS
 - Enemy now starts with base level cap of 20. The cap then raises for each unique boss kill based on NPC growth per boss value, configurable in setting. *(NPCUtils.cs line 143)*
 - Enemy spawns with randomized level around the cap with a range of -7 to +3 level. Bosses randomly get 10-25 increased level above the cap.
 - Formulas for HP/Damage of NPC/Bosses nerfed. *(NPCUtils.cs line 628, 642, 649)*
-- Formulas for Defense reworked. Now enemy defense matters. This is implemented to increase enemy survivability without the need of continuously increasing enemy HP. Moreover, this can prevent tank classes from investing all to defense stat and can still do damage. *(NPCUtils.cs line 657,659)*
+- Formulas for Defense reworked. Now enemy defense matters. This is implemented to increase enemy survivability without the need of continuously increasing enemy HP. Moreover,       this can prevent tank classes from investing all to defense stat and can still do damage. *(NPCUtils.cs line 657,659)*
 ### Misc/QoL
+- Increase exp gain per hit for weapons to compensate for the damage loss with the nerf. *(RPGPlayer.cs Line 190)*
+- Reduce exp lost when transfering XP from 75% -> 25% ( you keep 75% of the old item's XP) *(ItemExtraction.cs Line 36)*
