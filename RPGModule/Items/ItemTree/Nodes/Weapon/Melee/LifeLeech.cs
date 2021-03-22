@@ -48,7 +48,9 @@ namespace AnotherRpgMod.Items
 
         public override void SetPower(float value)
         {
-            leech = Utils.Mathf.Clamp(Utils.Mathf.Round(value*0.2f,2), 0.2f, 50);
+            leech = Utils.Mathf.Clamp(Utils.Mathf.Round(value*0.1f,2), 0.1f, 0.5f);
+         //   m_MaxLevel = 2;
+            m_RequiredPoints = 1 + Utils.Mathf.FloorInt(value * 0.8f);
             power = value;
         }
 
