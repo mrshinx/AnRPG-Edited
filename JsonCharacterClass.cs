@@ -56,13 +56,13 @@ namespace AnotherRpgMod
             ),
             new JsonChrClass(
                 "Regular",
-                new float[7]{ 0.2f, 0.2f, 0.2f, 0.2f, 0.2f, 0, 0 },
+                new float[7]{ 0.25f, 0.2f, 0.2f, 0.2f, 0.2f, 0, 0 },
                 0,
                 0.1f,0.05f
             ),
             new JsonChrClass(
                 "Expert",
-                new float[7]{ 0.3f, 0.3f, 0.3f, 0.3f, 0.3f, 0, 0 },
+                new float[7]{ 0.35f, 0.3f, 0.3f, 0.3f, 0.3f, 0, 0 },
                 0,
                 0.2f,0.05f,0,-0.05f,0.1f,0.0001f,0.1f
             ),
