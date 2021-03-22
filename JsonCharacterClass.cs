@@ -58,25 +58,25 @@ namespace AnotherRpgMod
                 "Regular",
                 new float[7]{ 0.2f, 0.2f, 0.2f, 0.2f, 0.2f, 0, 0 },
                 0,
-                0.15f,0.1f
+                0.1f,0.05f
             ),
             new JsonChrClass(
                 "Expert",
-                new float[7]{ 0.4f, 0.4f, 0.4f, 0.4f, 0.4f, 0, 0 },
+                new float[7]{ 0.3f, 0.3f, 0.3f, 0.3f, 0.3f, 0, 0 },
                 0,
-                0.25f,0.15f,0,-0.05f,0.1f,0.0001f,0.1f
+                0.2f,0.05f,0,-0.05f,0.1f,0.0001f,0.1f
             ),
             new JsonChrClass(
                 "Master",
-                new float[7]{ 0.7f, 0.7f, 0.7f, 0.7f, 0.7f, 0, 0 },
+                new float[7]{ 0.45f, 0.45f, 0.45f, 0.45f, 0.45f, 0, 0 },
                 0,
-                0.4f,0.2f,1,-0.1f,0.15f,0.00025f,0.25f
+                0.35f,0.1f,1,-0.1f,0.15f,0.00025f,0.25f
             ),
             new JsonChrClass(
                 "PerfectBeing",
-                new float[7]{ 1, 1, 1, 1, 1, 0, 0 },
+                new float[7]{ 0.6f, 0.6f, 0.6f, 0.6f, 0.6f, 0, 0 },
                 0,
-                1f,0.25f,1,-0.25f,0.25f,0.0005f,0.5f
+                0.5f,0.15f,1,-0.25f,0.25f,0.0005f,0.5f
             ),
             //T6 
             new JsonChrClass(
