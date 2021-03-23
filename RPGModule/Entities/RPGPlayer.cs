@@ -627,7 +627,7 @@ namespace AnotherRpgMod.RPGModule.Entities
                 armorItem = player.armor[i];
                 if (armorItem.Name!= "")
                 {
-                    armorItem.GetGlobalItem<Items.ItemUpdate>().AddExp(Mathf.Ceillong(damage*multiplier), player, armorItem);
+                    armorItem.GetGlobalItem<Items.ItemUpdate>().AddExp(Mathf.Ceillong(damage*5*multiplier), player, armorItem);
                 }
                     
             }
