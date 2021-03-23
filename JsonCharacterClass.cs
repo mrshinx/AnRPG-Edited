@@ -203,7 +203,7 @@ namespace AnotherRpgMod
                 "SwordMaster",
                 new float[7]{ 0.95f, 0, 0, 0, 0, 0, 0 },
                 0,
-                -0.3f,-0.15f,0.1f,0.15f,0,0,0,0,0,0
+                -0.3f,-0.15f,0.1f,0.2f,0,0,0,0,0,0
             ),
                 new JsonChrClass(
                 "Summoner",
@@ -233,7 +233,7 @@ namespace AnotherRpgMod
                 "IronKnight",
                 new float[7]{ 0.55f, 0, 0, 0, 0, 0, 0 },
                 0,
-                0.55f,0.2f,0,0,0,0,0,0,0
+                0.55f,0.2f,-0.1f,0,0,0,0,0,0
             ),
 
             //Specialist - Tier 4
@@ -253,7 +253,7 @@ namespace AnotherRpgMod
                 "Champion",
                 new float[7]{ 1.20f, 0, 0, 0, 0, 0, 0 },
                 0,
-                -0.3f,-0.2f,0.15f,0.2f,0,0,0,0,0,0
+                -0.3f,-0.2f,0.15f,0.3f,0,0,0,0,0,0
             ),
                 new JsonChrClass(
                 "SoulBinder",
@@ -283,7 +283,7 @@ namespace AnotherRpgMod
                 "Montain",
                 new float[7]{ 0.7f, 0, 0, 0, 0, 0, 0 },
                 0,
-                0.65f,0.3f,-0.05f,0,0,0,0,0,0
+                0.65f,0.3f,-0.15f,0,0,0,0,0,0
             ),
 
             //Specialist - Tier 5
@@ -303,7 +303,7 @@ namespace AnotherRpgMod
                 "SwordSaint",
                 new float[7]{ 1.45f, 0, 0, 0, 0, 0, 0 },
                 0,
-                -0.35f,-0.25f,0.2f,0.3f,0,0,0,0,0,0
+                -0.35f,-0.25f,0.2f,0.4f,0,0,0,0,0,0
             ),
                 new JsonChrClass(
                 "SoulLord",
@@ -333,7 +333,7 @@ namespace AnotherRpgMod
                 "Fortress",
                 new float[7]{ 0.85f, 0, 0, 0, 0, 0, 0 },
                 0,
-                0.8f,0.4f,-0.05f,0,0,0,0,0,0
+                0.8f,0.4f,-0.2f,0,0,0,0,0,0
             ),
 
             //Ascended Specialist / T6
