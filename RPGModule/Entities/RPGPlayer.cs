@@ -1166,7 +1166,7 @@ namespace AnotherRpgMod.RPGModule.Entities
             if (skilltree.HavePerk(Perk.ManaOverBurst))
             {
                 float bonusmanacost = player.statMana * (0.15f + ((float)skilltree.nodeList.GetPerk(Perk.ManaOverBurst).GetLevel - 1) * 0.15f);
-                float multiplier = 1 + (1 - 1 / (bonusmanacost / 1500 + 1));
+                float multiplier = 1 + (1 - 1 / (bonusmanacost / 1000 + 1));
                 player.magicDamage *= multiplier;
             }
         }
