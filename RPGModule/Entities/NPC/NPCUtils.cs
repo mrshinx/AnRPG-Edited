@@ -625,7 +625,9 @@ namespace AnotherRpgMod.RPGModule.Entities
             {
                 float power = 1.0f;
                 if (Main.hardMode)
-                    power = 1.13f;
+                    power = 1.1f;
+                if (NPC.downedPlantBoss)
+                    power = 1.2f;
 
                 if (npc.boss)
                 {
@@ -639,7 +641,7 @@ namespace AnotherRpgMod.RPGModule.Entities
                     }
 
                   //  npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.05f + tier*0.075), power) *Config.NPCConfig.BossHealthMultiplier* Config.NPCConfig.NpcHealthMultiplier), 1);
-                    npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.035f + tier*0.045f), power) *Config.NPCConfig.BossHealthMultiplier* Config.NPCConfig.NpcHealthMultiplier), 1);
+                    npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.04f + tier*0.05f), power) *Config.NPCConfig.BossHealthMultiplier* Config.NPCConfig.NpcHealthMultiplier), 1);
                 }
                 else
                 {
@@ -653,10 +655,10 @@ namespace AnotherRpgMod.RPGModule.Entities
                 if (npc.defense > 0)
                 {
                     //  npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * (1 + level * 0.01f + tier * 0.02f)), npc.defense);
-                    if (!Main.hardMode)
+                    if (!NPC.downedPlantBoss)
                         npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.2f + tier * 0.2f, power-0.3f)), npc.defense);
                     else
-                        npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.2f + tier * 0.2f, power-0.2f)), npc.defense);
+                        npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.21f + tier * 0.21f, power-0.3f)), npc.defense);
                 }
                 if (npc.defense > 5)
                     npc.defense -= 5;
