@@ -639,14 +639,14 @@ namespace AnotherRpgMod.RPGModule.Entities
                     }
 
                   //  npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.05f + tier*0.075), power) *Config.NPCConfig.BossHealthMultiplier* Config.NPCConfig.NpcHealthMultiplier), 1);
-                    npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.04f + tier*0.05f), power) *Config.NPCConfig.BossHealthMultiplier* Config.NPCConfig.NpcHealthMultiplier), 1);
+                    npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.035f + tier*0.045f), power) *Config.NPCConfig.BossHealthMultiplier* Config.NPCConfig.NpcHealthMultiplier), 1);
                 }
                 else
                 {
                     if (npc.damage > 0)
                         npc.damage = Mathf.HugeCalc(Mathf.FloorInt(npc.damage * (0.75f + level * 0.035f + tier * 0.05f) * Config.NPCConfig.NpcDamageMultiplier), 1);
                   //  npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.20f + tier * 0.35f), power) * Config.NPCConfig.NpcHealthMultiplier), 1);
-                    npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.16f + tier * 0.3f), power) * Config.NPCConfig.NpcHealthMultiplier), 1);
+                    npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.15f + tier * 0.29f), power) * Config.NPCConfig.NpcHealthMultiplier), 1);
                 }
                 
                 npc.value = npc.value * (1 + (level + tier) * 0.001f) *(1+ (int)rank*0.1f);
@@ -656,7 +656,7 @@ namespace AnotherRpgMod.RPGModule.Entities
                     if (!Main.hardMode)
                         npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.2f + tier * 0.2f, power-0.3f)), npc.defense);
                     else
-                        npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.2f + tier * 0.2f, power-0.05f)), npc.defense);
+                        npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.2f + tier * 0.2f, power-0.2f)), npc.defense);
                 }
                 if (npc.defense > 5)
                     npc.defense -= 5;
