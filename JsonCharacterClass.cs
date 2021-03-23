@@ -215,7 +215,7 @@ namespace AnotherRpgMod
                 "Arcanist",
                 new float[7]{ 0, 0, 0, 0.75f, 0, 0, 0 },
                 0,
-                -0.35f,0,0,-0.5f,0,0,0
+                -0.35f,0,0,-0.4f,0,0,0
             ),
                 new JsonChrClass(
                 "Rogue",
@@ -265,7 +265,7 @@ namespace AnotherRpgMod
                 "Warlock",
                 new float[7]{ 0, 0, 0, 1.0f, 0, 0, 0 },
                 0,
-                -0.25f,0,0,-0.7f,0.1f,0.00025f,0.1f
+                -0.25f,0,0,-0.5f,0.15f,0.00025f,0.1f
             ),
                 new JsonChrClass(
                 "Assassin",
@@ -315,7 +315,7 @@ namespace AnotherRpgMod
                 "Mystic",
                 new float[7]{ 0, 0, 0, 1.35f, 0, 0, 0 },
                 0,
-                -0.25f,0,0,-0.9f,0.25f,0.0005f,0.25f
+                -0.25f,0,0,-0.6f,0.3f,0.0005f,0.25f
             ),
                 new JsonChrClass(
                 "ShadowDancer",
