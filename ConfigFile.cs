@@ -301,7 +301,7 @@ namespace AnotherRpgMod
         [Tooltip("Multiply the world level by this value (applied before \"NPC growth OnHardMode\")")]
         [Range(1f, 10f)]
         [Increment(0.1f)]
-        [DefaultValue(1.1f)]
+        [DefaultValue(1.5f)]
         public float NPCGrowthHardModePercent;
 
         public override void OnLoaded()
