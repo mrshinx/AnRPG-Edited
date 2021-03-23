@@ -65,7 +65,7 @@ namespace AnotherRpgMod.Utils
                     return "50% for damage receive to heal, 50% to double damage";
                 case Perk.ManaOverBurst:
                     float bonusmanacost = Main.player[Main.myPlayer].statMana * (0.15f + ((float)level - 1) * 0.15f);
-                    float multiplier = 1 + (1 - 1 / (bonusmanacost / 1500 + 1));
+                    float multiplier = 1 + (1 - 1 / (bonusmanacost / 1000 + 1));
                     return "Increase mana cost by " + (15 + 15*(level-1)) + "% of current mana\nIncrease magic damage by " + Mathf.Round(multiplier*100 - 100, 2) + "%";
 
             }
