@@ -29,6 +29,7 @@ Nerf armor gain on VIT/CONS
 - Formulas for Defense reworked. Now enemy defense matters. This is implemented to increase enemy survivability without the need of continuously increasing enemy HP. Moreover,       this can prevent tank classes from investing all to defense stat and can still do damage. *(NPCUtils.cs line 657,659)*
 ### Misc/QoL/Bug fixes
 - Increase exp gain per hit for weapons to compensate for the damage loss with the nerf. *(RPGPlayer.cs Line 190)*
+- Increase exp gain per hit for armor to compensate for the defense loss with the nerf. *(RPGPlayer.cs Line 630)*
 - Reduce exp lost when transfering XP from 75% -> 25% ( you keep 75% of the old item's XP) *(ItemExtraction.cs Line 36)*
 - Fixed life leech calculation resulting in 2x life leech amount from item tree. This was fixed by dividing the value by 2 after calculating it from item tree. This is a dumb     way to fix and just acts as a temporary workaround. *(RPGPlayer.cs Line 1464)*
 - Changed value increment of Item Ascension Limit Per Boss in config from 0.25 -> 0.1. This enables having values like 0.2 (1 for 5 boss kills).
