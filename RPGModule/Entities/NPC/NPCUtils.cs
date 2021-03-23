@@ -658,7 +658,7 @@ namespace AnotherRpgMod.RPGModule.Entities
                     if (!NPC.downedPlantBoss)
                         npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.2f + tier * 0.2f, power-0.3f)), npc.defense);
                     else
-                        npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.21f + tier * 0.21f, power-0.3f)), npc.defense);
+                        npc.defense = Mathf.HugeCalc(Mathf.FloorInt(npc.defense * Mathf.Pow(level * 0.2f + tier * 0.2f, power-0.25f)), npc.defense);
                 }
                 if (npc.defense > 5)
                     npc.defense -= 5;
