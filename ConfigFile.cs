@@ -292,16 +292,16 @@ namespace AnotherRpgMod
 
         [Label("NPC growth OnHardMode")]
         [Tooltip("How many level the world gain when entering hardmode")]
-        [Range(1, int.MaxValue)]
+        [Range(0, int.MaxValue)]
         [Increment(5)]
-        [DefaultValue(50)]
+        [DefaultValue(20)]
         public int NPCGrowthHardMode;
 
         [Label("NPC growth Hard Mode Percent")]
         [Tooltip("Multiply the world level by this value (applied before \"NPC growth OnHardMode\")")]
         [Range(1f, 10f)]
         [Increment(0.1f)]
-        [DefaultValue(1.5f)]
+        [DefaultValue(1.2f)]
         public float NPCGrowthHardModePercent;
 
         public override void OnLoaded()
