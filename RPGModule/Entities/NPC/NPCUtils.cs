@@ -109,7 +109,7 @@ namespace AnotherRpgMod.RPGModule.Entities
             if (Main.expertMode)
             {
                 baselevel = (int)(baselevel * 0.8f);
-                if (AnotherRpgMod.LoadedMods[SupportedMod.Calamity])
+              /*  if (AnotherRpgMod.LoadedMods[SupportedMod.Calamity])
                 {
                     if (baselevel > 15)
                     {
@@ -120,7 +120,7 @@ namespace AnotherRpgMod.RPGModule.Entities
                     baselevel = (int)(baselevel * 0.5f);
 
                     
-                }
+                } */
             }
 
             baselevel = WorldManager.GetWorldLevelMultiplier(baselevel);
