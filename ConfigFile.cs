@@ -142,7 +142,7 @@ namespace AnotherRpgMod
         [Label("Item Ascension Limit Per Boss")]
         [Tooltip("How much the ascend limit Increase Per boss, 0.5 mean one for two each boss killed, '2' mean two for each boss killed")]
         [Range(0.1F, 10F)]
-        [Increment(.1f)]
+        [Increment(.05f)]
         [DefaultValue(1f)]
         public float AscendLimitPerBoss;
 
