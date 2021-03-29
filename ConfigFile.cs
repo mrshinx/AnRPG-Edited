@@ -15,11 +15,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Runtime.Serialization;
 using Terraria.ModLoader.UI;
-using AnotherRpgMod.UI;
+using AnRPGEdited.UI;
 using Terraria.ID;
 
 
-namespace AnotherRpgMod
+namespace AnRPGEdited
 {
     [Flags]
     public enum GamePlayFlag
@@ -82,17 +82,17 @@ namespace AnotherRpgMod
 
         public override void OnLoaded()
         {
-            AnotherRpgMod.visualConfig = this;
+            AnRPGEdited.visualConfig = this;
         }
         public override void OnChanged()
         {
             if (Main.netMode != NetmodeID.Server)
             {
-                AnotherRpgMod.visualConfig = this;
-                if (AnotherRpgMod.Instance!= null) { 
-                    AnotherRpgMod.Instance.healthBar.Reset();
-                    AnotherRpgMod.Instance.OpenST.Reset();
-                    AnotherRpgMod.Instance.openStatMenu.Reset();
+                AnRPGEdited.visualConfig = this;
+                if (AnRPGEdited.Instance!= null) { 
+                    AnRPGEdited.Instance.healthBar.Reset();
+                    AnRPGEdited.Instance.OpenST.Reset();
+                    AnRPGEdited.Instance.openStatMenu.Reset();
                 
                 }
             }
@@ -184,11 +184,11 @@ namespace AnotherRpgMod
 
         public override void OnLoaded()
         {
-            AnotherRpgMod.gpConfig = this;
+            AnRPGEdited.gpConfig = this;
         }
         public override void OnChanged()
         {
-            AnotherRpgMod.gpConfig = this;
+            AnRPGEdited.gpConfig = this;
         }
     }
     [Label("AnRPG Enemies config")]
@@ -231,21 +231,43 @@ namespace AnotherRpgMod
         [DefaultValue(true)]
         public bool LimitNPCGrowth;
 
-        
-        [Label("Limit NPC growth Value")]
-        [Tooltip("If Limit Npc Growth is actiaved, limit npc level by your level + this value + level X Growth Percent")]
-        [Range(0, int.MaxValue)]
-        [Increment(10)]
-        [DefaultValue(20)]
-        public int LimitNPCGrowthValue;
+        [Label("NPC growth Per Boss")]
+        [Tooltip("How many level the world gain when killing a boss")]
+        [Range(1, int.MaxValue)]
+        [Increment(5)]
+        [DefaultValue(15)]
+        public int NPCGrowthValue;
 
-        
-        [Label("Limit NPC growth Percent")]
-        [Tooltip("If Limit Npc Growth is actiaved, limit npc level by your level + Growth Value + level X Growth Percent ")]
-        [Range(0f, 200f)]
-        [Increment(5f)]
-        [DefaultValue(20f)]
-        public float LimitNPCGrowthPercent;
+        /*  
+          [Label("Limit NPC growth Value")]
+          [Tooltip("If Limit Npc Growth is actiaved, limit npc level by your level + this value + level X Growth Percent")]
+          [Range(0, int.MaxValue)]
+          [Increment(10)]
+          [DefaultValue(20)]
+          public int LimitNPCGrowthValue;
+
+
+          [Label("Limit NPC growth Percent")]
+          [Tooltip("If Limit Npc Growth is actiaved, limit npc level by your level + Growth Value + level X Growth Percent ")]
+          [Range(0f, 200f)]
+          [Increment(5f)]
+          [DefaultValue(20f)]
+          public float LimitNPCGrowthPercent;
+  */
+
+        [Label("NPC growth OnHardMode")]
+        [Tooltip("How many level the world gain when entering hardmode")]
+        [Range(0, int.MaxValue)]
+        [Increment(5)]
+        [DefaultValue(20)]
+        public int NPCGrowthHardMode;
+
+        [Label("NPC growth Hard Mode Percent")]
+        [Tooltip("Multiply the world level by this value (applied before \"NPC growth OnHardMode\")")]
+        [Range(1f, 10f)]
+        [Increment(0.1f)]
+        [DefaultValue(1.2f)]
+        public float NPCGrowthHardModePercent;
 
         [Label("Npc Level Multiplier")]
         [Tooltip("Multiply all npc level by this value")]
@@ -282,35 +304,13 @@ namespace AnotherRpgMod
         [DefaultValue(1f)]
         public float BossHealthMultiplier;
 
-        
-        [Label("NPC growth Per Boss")]
-        [Tooltip("How many level the world gain when killing a boss")]
-        [Range(1, int.MaxValue)]
-        [Increment(5)]
-        [DefaultValue(15)]
-        public int NPCGrowthValue;
-
-        [Label("NPC growth OnHardMode")]
-        [Tooltip("How many level the world gain when entering hardmode")]
-        [Range(0, int.MaxValue)]
-        [Increment(5)]
-        [DefaultValue(20)]
-        public int NPCGrowthHardMode;
-
-        [Label("NPC growth Hard Mode Percent")]
-        [Tooltip("Multiply the world level by this value (applied before \"NPC growth OnHardMode\")")]
-        [Range(1f, 10f)]
-        [Increment(0.1f)]
-        [DefaultValue(1.2f)]
-        public float NPCGrowthHardModePercent;
-
         public override void OnLoaded()
         {
-            AnotherRpgMod.NPCConfig = this;
+            AnRPGEdited.NPCConfig = this;
         }
         public override void OnChanged()
         {
-            AnotherRpgMod.NPCConfig = this;
+            AnRPGEdited.NPCConfig = this;
 
             JsonSkillTree.Load();
             JsonCharacterClass.Load();
@@ -322,15 +322,15 @@ namespace AnotherRpgMod
     {
         static public VisualConfig vConfig
         {
-            get { return AnotherRpgMod.visualConfig; }
+            get { return AnRPGEdited.visualConfig; }
         }
         static public GamePlayConfig gpConfig
         {
-            get { return AnotherRpgMod.gpConfig; }
+            get { return AnRPGEdited.gpConfig; }
         }
         static public NPCConfig NPCConfig
         {
-            get { return AnotherRpgMod.NPCConfig; }
+            get { return AnRPGEdited.NPCConfig; }
         }
 
     }
