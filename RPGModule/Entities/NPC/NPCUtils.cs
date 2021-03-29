@@ -636,7 +636,8 @@ namespace AnotherRpgMod.RPGModule.Entities
                         npc.damage = Mathf.HugeCalc(Mathf.FloorInt(npc.damage * (0.35f + level * 0.04f + tier * 0.06f)* Config.NPCConfig.NpcDamageMultiplier * 0.75f), 1);
                         else
                         {
-                            npc.damage = Mathf.FloorInt(250000 * Mathf.Logx(1 + level * 0.10f + tier * 0.30f, 7.5f) * Config.NPCConfig.NpcDamageMultiplier);
+                         //   npc.damage = Mathf.FloorInt(250000 * Mathf.Logx(1 + level * 0.10f + tier * 0.30f, 7.5f) * Config.NPCConfig.NpcDamageMultiplier);
+                            npc.damage = Mathf.FloorInt(250000 * Mathf.Logx(1 + level * 0.06f + tier * 0.16f, 7.5f) * Config.NPCConfig.NpcDamageMultiplier);
                         }
                     }
 
@@ -646,7 +647,8 @@ namespace AnotherRpgMod.RPGModule.Entities
                 else
                 {
                     if (npc.damage > 0)
-                        npc.damage = Mathf.HugeCalc(Mathf.FloorInt(npc.damage * (0.75f + level * 0.035f + tier * 0.05f) * Config.NPCConfig.NpcDamageMultiplier), 1);
+                    //    npc.damage = Mathf.HugeCalc(Mathf.FloorInt(npc.damage * (0.75f + level * 0.035f + tier * 0.05f) * Config.NPCConfig.NpcDamageMultiplier), 1);
+                        npc.damage = Mathf.HugeCalc(Mathf.FloorInt(npc.damage * (0.75f + level * 0.017f + tier * 0.021f) * Config.NPCConfig.NpcDamageMultiplier), 1);
                   //  npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.20f + tier * 0.35f), power) * Config.NPCConfig.NpcHealthMultiplier), 1);
                     npc.lifeMax = Mathf.HugeCalc(Mathf.FloorInt(Mathf.Pow(npc.lifeMax * (level * 0.15f + tier * 0.29f), power) * Config.NPCConfig.NpcHealthMultiplier), 1);
                 }
