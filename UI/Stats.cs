@@ -406,12 +406,12 @@ namespace AnotherRpgMod.UI
             switch (stat)
             {
                 case (Stat.Vit):
-                    UpgradeStatOver[0].SetText("+ " + (((float)Char.player.statLifeMax / 20f) * 0.65f * Char.statMultiplier) + " Hp");
+                    UpgradeStatOver[0].SetText("+ " + (((float)Char.player.statLifeMax / 20f) * 0.3f * Char.statMultiplier) + " Hp");
                     UpgradeStatOver[0].TextColor = MainColor;
                   //  UpgradeStatOver[2].SetText("+ " + (Char.BaseArmor*0.0025f* Char.statMultiplier) + " Armor");
-                    UpgradeStatOver[2].SetText("+ " + (Char.BaseArmor*0.0015f* Char.statMultiplier) + " Armor");
+                    UpgradeStatOver[2].SetText("+ " + (Char.BaseArmor*0.0007f* Char.statMultiplier) + " Armor");
                     UpgradeStatOver[2].TextColor = SecondaryColor;
-                    UpgradeStatOver[10].SetText("+ " + (0.02f* Char.statMultiplier)+" HP/Sec");
+                    UpgradeStatOver[10].SetText("+ " + (0.01f* Char.statMultiplier)+" HP/Sec");
                     break;
                 case (Stat.Foc):
                     UpgradeStatOver[1].SetText("+ " + (((float)Char.player.statManaMax / 20f) * 0.02f * Char.statMultiplier) + " Mana");
@@ -422,12 +422,12 @@ namespace AnotherRpgMod.UI
 
                     break;
                 case (Stat.Cons):
-                    UpgradeStatOver[0].SetText("+ " + (((float)Char.player.statLifeMax / 20f) * 0.325f * Char.statMultiplier) + " Hp");
+                    UpgradeStatOver[0].SetText("+ " + (((float)Char.player.statLifeMax / 20f) * 0.15f * Char.statMultiplier) + " Hp");
                     UpgradeStatOver[0].TextColor = SecondaryColor;
                   //  UpgradeStatOver[2].SetText("+ " + (Char.BaseArmor * 0.006f * Char.statMultiplier) + " Armor");
-                    UpgradeStatOver[2].SetText("+ " + (Char.BaseArmor * 0.004f * Char.statMultiplier) + " Armor");
+                    UpgradeStatOver[2].SetText("+ " + (Char.BaseArmor * 0.002f * Char.statMultiplier) + " Armor");
                     UpgradeStatOver[2].TextColor = MainColor;
-                    UpgradeStatOver[10].SetText("+ " + (0.02f * Char.statMultiplier) + " HP/Sec");
+                    UpgradeStatOver[10].SetText("+ " + (0.01f * Char.statMultiplier) + " HP/Sec");
                     break;
                 case (Stat.Str):
                     UpgradeStatOver[3].SetText("+ " +(RPGPlayer.MAINSTATSMULT * Char.statMultiplier)+ " Multiplier");
