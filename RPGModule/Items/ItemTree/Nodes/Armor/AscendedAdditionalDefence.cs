@@ -8,19 +8,27 @@ using AnotherRpgMod.Utils;
 
 namespace AnotherRpgMod.Items
 {
-    class AdditionalDefenceNode : ItemNode
+    class AscendedAdditionalDefence : ItemNode
     {
-        new protected string m_Name = "Additional Defence";
-        new protected string m_Desc = "+ XX% Defense";
+        new protected string m_Name = "(Ascended) Bonus Defense";
+        new protected string m_Desc = "+ Defense";
+        new public float rarityWeight = 0.05f;
+        new protected bool m_isAscend = true;
 
+        public override bool IsAscend
+        {
+            get
+            {
+                return m_isAscend;
+            }
+        }
 
         public override NodeCategory GetNodeCategory 
         {
             get
             {
                 
-             //   return NodeCategory.Flat;
-                return NodeCategory.Multiplier;
+                return NodeCategory.Flat;
             }
         }
 
@@ -33,25 +41,23 @@ namespace AnotherRpgMod.Items
         }
 
         public override string GetDesc { get {
-                return "Add " + (Def * Utils.Mathf.Clamp(GetLevel,1,GetMaxLevel)) + "% Defense";
+                return "Add " + FlatDef + " Defense";
             } }
 
-        
+
 
         public int FlatDef;
-        public float Def;
 
         public override void Passive(Item item)
         {
-            item.GetGlobalItem<ItemUpdate>().DefenceBuffer += item.GetGlobalItem<ItemUpdate>().DefenceFlatBuffer * (Def * GetLevel) * 0.01f;
+            item.GetGlobalItem<ItemUpdate>().DefenceFlatBuffer += FlatDef;
         }
 
         public override void SetPower(float value)
         {
-            // FlatDef = Utils.Mathf.Clamp((int)Utils.Mathf.Pow(value * 0.8, 0.5f), 1, 999);
-            Def = Utils.Mathf.Clamp(Utils.Mathf.Round(Utils.Mathf.Pow(value, 1.1f), 2), 3f, 20);
-           // FlatDef = Utils.Mathf.Clamp((int)Utils.Mathf.Pow(value * 0.4, 0.7f), 1, 999);
-            m_RequiredPoints = 1 + Utils.Mathf.FloorInt(value * 0.5f);
+            FlatDef = Utils.Mathf.Clamp((int)Utils.Mathf.Pow(value*0.6f, 1.01f), 1, 3);
+            m_MaxLevel = 1;
+            m_RequiredPoints = 1;
             power = value;
         }
 

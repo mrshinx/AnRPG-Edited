@@ -19,7 +19,7 @@ namespace AnotherRpgMod.Utils
         //Node availible for armor
         static public List<int> ArmorID = new List<int>()
         {
-            300,
+            300,400
         };
 
 
@@ -67,7 +67,7 @@ namespace AnotherRpgMod.Utils
             {150,typeof(MagicCostReduction) },
 
             {300,typeof(AdditionalDefenceNode) },
-
+            {400,typeof(AscendedAdditionalDefence) },
 
             {500,typeof(BonusExpNode) },
 
