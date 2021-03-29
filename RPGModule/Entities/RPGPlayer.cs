@@ -752,9 +752,7 @@ namespace AnotherRpgMod.RPGModule.Entities
             float defenseMult = 0.5f;
             if (Main.expertMode)
                 defenseMult = 0.75f;
-
             int damageafterArmor = (int)(damage - player.statDefense * defenseMult);
-
             float maxDamageAbsorbed = damageafterArmor * ShieldInfo.DamageAbsorbtion;
             float ManaCost = maxDamageAbsorbed / ShieldInfo.ManaPerDamage;
             ManaCost = Mathf.Clamp(ManaCost, 0, player.statMana);
@@ -779,7 +777,8 @@ namespace AnotherRpgMod.RPGModule.Entities
         }
         public float GetDefenceMult()
         {
-                return (GetStatImproved(Stat.Vit) * 0.0015f + GetStatImproved(Stat.Cons) * 0.004f) * statMultiplier + 1f ;
+             //   return (GetStatImproved(Stat.Vit) * 0.0015f + GetStatImproved(Stat.Cons) * 0.004f) * statMultiplier + 1f ;
+                return (GetStatImproved(Stat.Vit) * 0.0007f + GetStatImproved(Stat.Cons) * 0.002f) * statMultiplier + 1f ;
         }
 
         public override void OnConsumeMana(Item item, int manaConsumed)
@@ -855,7 +854,8 @@ namespace AnotherRpgMod.RPGModule.Entities
         }
         public float GetHealthPerHeart()
         {
-                return (GetStatImproved(Stat.Vit) * 0.65f + GetStatImproved(Stat.Cons) * 0.325f)* statMultiplier + 10;
+           //     return (GetStatImproved(Stat.Vit) * 0.65f + GetStatImproved(Stat.Cons) * 0.325f)* statMultiplier + 10;
+                return (GetStatImproved(Stat.Vit) * 0.3f + GetStatImproved(Stat.Cons) * 0.15f)* statMultiplier + 10;
         }
         public float GetManaPerStar()
         {
@@ -1274,7 +1274,8 @@ namespace AnotherRpgMod.RPGModule.Entities
                 RegenMultiplier = 0.25f + 0.25f * skilltree.nodeList.GetPerk(Perk.Chlorophyll).GetLevel;
             }
 
-            return (GetStatImproved(Stat.Vit) + GetStatImproved(Stat.Cons)) * 0.02f * statMultiplier * RegenMultiplier;
+          //  return (GetStatImproved(Stat.Vit) + GetStatImproved(Stat.Cons)) * 0.02f * statMultiplier * RegenMultiplier;
+            return (GetStatImproved(Stat.Vit) + GetStatImproved(Stat.Cons)) * 0.01f * statMultiplier * RegenMultiplier;
         }
         public float GetManaRegen()
         {
