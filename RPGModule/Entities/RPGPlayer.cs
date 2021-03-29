@@ -1337,9 +1337,9 @@ namespace AnotherRpgMod.RPGModule.Entities
                     case DamageType.Throw:
                         return (GetStatImproved(Stat.Dex) * MAINSTATSMULT + GetStatImproved(Stat.Str) * SECONDARYTATSMULT) * statMultiplier + 0.8f;
                     case DamageType.Symphonic:
-                        return (GetStatImproved(Stat.Agi) * SECONDARYTATSMULT + GetStatImproved(Stat.Foc) * SECONDARYTATSMULT) *statMultiplier + 0.8f;
+                        return (GetStatImproved(Stat.Agi) * MAINSTATSMULT*2 + GetStatImproved(Stat.Foc) * MAINSTATSMULT*2) *statMultiplier + 0.8f;
                     case DamageType.Radiant:
-                        return (GetStatImproved(Stat.Int) * SECONDARYTATSMULT + GetStatImproved(Stat.Spr) * SECONDARYTATSMULT) * statMultiplier + 0.8f;
+                        return (GetStatImproved(Stat.Int) * MAINSTATSMULT*2 + GetStatImproved(Stat.Spr) * MAINSTATSMULT*2) * statMultiplier + 0.8f;
                 case DamageType.KI:
                         return (GetStatImproved(Stat.Spr) * MAINSTATSMULT + GetStatImproved(Stat.Str) * SECONDARYTATSMULT) * statMultiplier + 0.8f;
                 default:
