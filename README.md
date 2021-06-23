@@ -28,9 +28,10 @@ Nerf armor gain on VIT/CONS
 #### Detailed changes:
 - Enemy now starts with base level cap of 20. The cap then raises for each unique boss kill based on NPC growth per boss value, configurable in setting. *(NPCUtils.cs line 143)*
 - Enemy spawns with randomized level around the cap with a range of -7 to +3 level. Bosses randomly get 10-25 increased level above the cap.
-- Formulas for HP/Damage of NPC/Bosses nerfed. *(NPCUtils.cs line 628, 642, 649)*
-- Formulas for Defense reworked. Now enemy defense matters. This is implemented to increase enemy survivability without the need of continuously increasing enemy HP. Moreover,     this can prevent tank classes from investing all to defense stat and can still do damage. *(NPCUtils.cs line 657,659)*
-- Added scaling post-Plantera. After Plantera has been defeated, enemies get stronger. *(NPCUtils.cs line 629)*
+- Formulas for HP/Damage of NPC/Bosses nerfed. *(NPCUtils.cs line 637, 641, 652, 654)*
+- Formulas for Defense reworked. Now enemy defense matters. This is implemented to increase enemy survivability without the need of continuously increasing enemy HP. Moreover,     this can prevent tank classes from investing all to defense stat and can still do damage. *(NPCUtils.cs line 662,664)*
+- Added scaling post-Plantera. After Plantera has been defeated, enemies get stronger. *(NPCUtils.cs line 630)*
+- Added Defense Multiplier factor. Enemies get 50% of their armor value at day 0, up to 100% at day 20. This is implemented to help ease the struggle in the very beginning of a new playthrough. *(NPCUtils.cs line 627)*
 ### Misc/QoL/Bug fixes
 - Increase exp gain per hit for weapons to compensate for the damage loss with the nerf. *(RPGPlayer.cs Line 190)*
 - Increase exp gain per hit for armor to compensate for the defense loss with the nerf. *(RPGPlayer.cs Line 630)*
