@@ -1,12 +1,13 @@
 ﻿using System;
 using Terraria;
 using Terraria.ModLoader;
-using AnotherRpgMod.Utils;
+using AnRPGEdited.Utils;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
+using System.Linq;
 
-namespace AnotherRpgMod.RPGModule.Entities
+namespace AnRPGEdited.RPGModule.Entities
 {
     class ARPGGlobalProjectile : GlobalProjectile
     {
@@ -25,8 +26,8 @@ namespace AnotherRpgMod.RPGModule.Entities
 
         public override void ModifyHitPlayer(Projectile projectile, Player target, ref int damage, ref bool crit)
         {
-            int projectilelevel = (int)((WorldManager.GetWorldLevelMultiplier(Config.NPCConfig.NPCProjectileDamageLevel)+ WorldManager.GetWorldAdditionalLevel()) * Config.NPCConfig.NpclevelMultiplier );
-
+            //int projectilelevel = (int)((WorldManager.GetWorldLevelMultiplier(Config.NPCConfig.NPCProjectileDamageLevel)+ WorldManager.GetWorldAdditionalLevel()) * Config.NPCConfig.NpclevelMultiplier );
+            int projectilelevel = Mathf.CeilInt(20 + WorldManager.GetWorldAdditionalLevel());
 
             /*
             debug
@@ -41,16 +42,23 @@ namespace AnotherRpgMod.RPGModule.Entities
             Main.NewText("projectile damage multiplier : " + Mathf.Pow(1 + projectilelevel * 0.02f, 0.95f) * Config.NPCConfig.NpcDamageMultiplier);
             */
 
-            damage = Mathf.HugeCalc(Mathf.FloorInt(projectile.damage *(1 + projectilelevel * 0.05f) * Config.NPCConfig.NpcDamageMultiplier), projectile.damage);
+            // damage = Mathf.HugeCalc(Mathf.FloorInt(projectile.damage *(1 + projectilelevel * 0.05f) * Config.NPCConfig.NpcDamageMultiplier), projectile.damage);
+            if (Main.npc.Any(n => n.whoAmI < Main.maxNPCs && n.active && n.boss))
+                damage = Mathf.HugeCalc(Mathf.FloorInt(projectile.damage * (0.3f + projectilelevel * 0.01f + Config.NPCConfig.NPCProjectileDamageLevel * 0.01f) * Config.NPCConfig.NpcDamageMultiplier), projectile.damage);
+            else
+                damage = Mathf.HugeCalc(Mathf.FloorInt(projectile.damage * (0.45f + projectilelevel * 0.025f + Config.NPCConfig.NPCProjectileDamageLevel * 0.01f) * Config.NPCConfig.NpcDamageMultiplier), projectile.damage);
+            //damage = Mathf.HugeCalc(Mathf.FloorInt(projectile.damage *(1 + WorldManager.GetMaximumAscend() * 0.031f) * Config.NPCConfig.NpcDamageMultiplier), projectile.damage);
         }
 
         public override void ModifyHitNPC(Projectile projectile, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
             if (projectile.npcProj)
             {
-                int projectilelevel = (int)(WorldManager.GetWorldLevelMultiplier(Config.NPCConfig.NPCProjectileDamageLevel) * Config.NPCConfig.NpclevelMultiplier);
+                //int projectilelevel = (int)(WorldManager.GetWorldLevelMultiplier(Config.NPCConfig.NPCProjectileDamageLevel) * Config.NPCConfig.NpclevelMultiplier);
+                int projectilelevel = Mathf.CeilInt(20 + WorldManager.GetWorldAdditionalLevel());
 
-                damage = Mathf.HugeCalc(Mathf.FloorInt(projectile.damage * Mathf.Pow(1 + projectilelevel * 0.02f, 0.95f)* Config.NPCConfig.NpcDamageMultiplier), projectile.damage);
+                // damage = Mathf.HugeCalc(Mathf.FloorInt(projectile.damage * Mathf.Pow(1 + projectilelevel * 0.02f, 0.95f)* Config.NPCConfig.NpcDamageMultiplier), projectile.damage);
+                damage = Mathf.HugeCalc(Mathf.FloorInt(projectile.damage * Mathf.Pow(1 + projectilelevel * 0.015f, 0.95f)* Config.NPCConfig.NpcDamageMultiplier), projectile.damage);
             }
         }
         
