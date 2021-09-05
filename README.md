@@ -43,3 +43,4 @@ Nerf armor gain on VIT/CONS
 - Fixed conflict with Calamity. There was a fix in the code that tried to balance Calamity, but it's causing some of the vanilla mobs (and Calamity ones) to not scale correctly.   Now with the new level cap system, hopefully this will calms Calamity scaling down a little bit. Removed the fix *(NPCUtils.cs Line 112-123)*.
 - Greatly increased stat impact on Symphonic and Radiant damage to hopefully offset the disadvantage of not having class node in skill tree.
 - Fixed wrong XP transfer calculation by adding a new separate method to calculate each level XP requirement *(ItemUpdate.cs Line 414-419)*.
+- Killing Moonlord no longer removes ascension cap.
